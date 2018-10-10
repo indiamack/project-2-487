@@ -1,3 +1,35 @@
+@supports (grid-area:auto){
+
+.site{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 300px 100px 100px;
+  grid-template-areas:;
+  margin: 0;
+}
+
+.flex{
+  display: flex;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: HindBold;
+  src: url('../fonts/Hind-Bold.ttf');
+}
+
+/* Slide 1 ----------------------------------------------*/
+.welcome-title{
+  grid-column: 5/9;
+  font-family: HindBold;
+  color: white;
+  flex-direction:column;
+  text-align:right;
+}
 
 #slide1{
   background-image: url("../img/slider1-background.png");
@@ -6,6 +38,15 @@
   width:100%;
   background-position: center;
 }
+
+#car{
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: 300px;
+  left: -300px;
+}
+
 
 /* Slick Slider */
 .slick-slider
@@ -125,4 +166,6 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
 }
