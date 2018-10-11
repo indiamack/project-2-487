@@ -26,9 +26,27 @@
 .welcome-title{
   grid-column: 5/9;
   font-family: HindBold;
-  color: white;
+  color: #5b5c56;
   flex-direction:column;
   text-align:right;
+  padding-right: 10%;
+}
+
+.welcome-title h3{
+  font-family: OpenSans;
+}
+
+.welcome-title h1, h2{
+  margin: 0px;
+  line-height: 50px;
+}
+
+.welcome-title h2{
+  margin-top: 20px;
+}
+
+.welcome-title h1{
+  font-size: 63px;
 }
 
 #slide1{
@@ -44,9 +62,31 @@
   height: auto;
   position: absolute;
   top: 300px;
-  left: -300px;
 }
 
+/* Slide 1 ----------------------------------------------*/
+#slide2{
+  background-image: url("../img/slide2-background.png");
+  background-size: cover;
+  height: 500px;
+  width:100%;
+}
+
+#lidar-graphic, #radar-graphic, #image-graphic, #ultrasonic-graphic{
+  display: none;
+  overflow: hidden;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+}
+
+#car-sensor{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 25%;
+}
 
 /* Slick Slider */
 .slick-slider
