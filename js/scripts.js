@@ -1,30 +1,66 @@
 $(function (){
   console.log('DOM Loaded');
 
+
+  $(document).ready(function() {
+            $('.tooltip').tooltipster();
+            console.log('tooltip ready')
+        });
+
   $('.slick-slider').slick({
     });
 
-/* $('#slide1').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  console.log(nextSlide);
-  $('#car').animate({left: '600px'}, "slow");
-}); */
+  $('#slide1').ready(function(){
+    console.log('car animated');
+    $('#car').animate({left: '+=300px'}, 1000);
+  });
 
 
-$('#slide1').ready(function(){
-  console.log('car animated');
-  $('#car').animate({left: '+=300px'}, 1000);
-});
+  $('.site').on('afterChange', function(slick){
+    console.log('car animated 2');
+  });
 
-$('.slide1').click(function(beforeChange){
-  console.log(nextSlide);
-  $('#car').animate({left: '+=300px'}, 1000);
-  waitForAnimate: true;
-});
+  $('#ld').on({
+    mouseenter: function(){
+      $(this).css('color', '#8adfed');
+      $('#lidar-graphic').css('display', 'block');
+    },
+    mouseleave: function(){
+    $(this).css('color', '#5b5c56');
+    $('#lidar-graphic').css('display', 'none');
+    },
+  });
 
-$('#slide2').click(function(){
-  console.log('car animated 2');
-  $('#car-sensor').animate({left: '+=300px'}, 1000);
-});
+  $('#rd').on({
+    mouseenter: function(){
+      $(this).css('color', '#8990ef');
+      $('#radar-graphic').css('display', 'block');
+    },
+    mouseleave: function(){
+    $(this).css('color', '#5b5c56');
+    $('#radar-graphic').css('display', 'none');
+    },
+  });
 
+  $('#im').on({
+    mouseenter: function(){
+      $(this).css('color', '#d388f2');
+      $('#image-graphic').css('display', 'block');
+    },
+    mouseleave: function(){
+    $(this).css('color', '#5b5c56');
+    $('#image-graphic').css('display', 'none');
+    },
+  });
 
+  $('#us').on({
+    mouseenter: function(){
+      $(this).css('color', '#f487b1');
+      $('#ultrasonic-graphic').css('display', 'block');
+    },
+    mouseleave: function(){
+    $(this).css('color', '#5b5c56');
+    $('#ultrasonic-graphic').css('display', 'none');
+    },
+  });
 });

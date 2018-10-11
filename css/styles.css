@@ -78,7 +78,10 @@
   width: 200px;
   height: auto;
   position: absolute;
-  top: 50%;
+  top: 25%;
+  width: 500px;
+  height: auto;
+  grid-column: 1/5;
 }
 
 #car-sensor{
@@ -86,6 +89,31 @@
   height: auto;
   position: absolute;
   top: 25%;
+}
+
+.sensor-text{
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+  display: none;
+}
+
+.sensor-title{
+  grid-column: 5/9;
+  font-family: HindBold;
+  color: #5b5c56;
+  text-align: right;
+  padding-right: 10%;
+}
+
+ul{
+  list-style-type: none;
+}
+li{
+  font-family: OpenSans;
+  color: #5b5c56;
+  font-size: 20px;
+  line-height: 2em;
 }
 
 /* Slick Slider */

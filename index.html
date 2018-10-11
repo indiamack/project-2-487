@@ -3,6 +3,7 @@
 <head>
   <title>Project 2</title>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="tooltipster/css/tooltipster.bundle.min.css" />
 
 
 <body>
@@ -20,11 +21,23 @@
     </div>
     <div id="slide2">
       <div class="site">
-        <img id="car-sensor" src="img/sensor-car.png">
-        <img id="lidar-graphic" src="img/lidar.png">
-        <img id="radar-graphic" src="img/radar.png">
-        <img id="image-graphic" src="img/image.png">
-        <img id="ultrasonic-graphic" src="img/ultrasonic.png">
+        <div class="sensor-title">
+          <h1>Sensors Explained</h1>
+          <ul>
+            <li id="ld">Lidar Sensors</li>
+            <li id="rd">Radar Sensors</li>
+            <li id="im">Image Sensors</li>
+            <li id="us">Ultrasonic Sensors</li>
+            <li id="cl">Cloud</li>
+          </ul>
+        </div>
+        <div class="sensors">
+          <img id="lidar-graphic" src="img/lidar.png">
+          <img id="radar-graphic" src="img/radar.png">
+          <img id="image-graphic" src="img/image.png">
+          <img id="ultrasonic-graphic" src="img/ultrasonic.png">
+          <img id="car-sensor" src="img/sensor-car.png">
+        </div>
       </div>
     </div>
     <div>your content</div>
@@ -40,6 +53,7 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="tooltipster/js/tooltipster.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
