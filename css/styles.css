@@ -91,6 +91,9 @@
   top: 25%;
 }
 
+.sensors{
+  grid-column: 1/5;
+}
 .sensor-text{
   height: 300px;
   width: 300px;
@@ -99,11 +102,13 @@
 }
 
 .sensor-title{
-  grid-column: 5/9;
+  grid-column: 7/9;
   font-family: HindBold;
   color: #5b5c56;
   text-align: right;
   padding-right: 10%;
+  grid-row: span 3;
+  background-color: rgba(244, 221, 55, 0.6);
 }
 
 ul{
@@ -114,6 +119,97 @@ li{
   color: #5b5c56;
   font-size: 20px;
   line-height: 2em;
+}
+
+.modal-wrapper{
+  grid-column: 5/7;
+  grid-row: span 3;
+}
+
+.modal{
+  padding: 15px;
+  display: none;
+  color: white;
+}
+
+#modal-ld{
+  background-color: rgba(138, 223, 237, 0.6);
+}
+
+#modal-rd{
+  background-color: rgba(137, 144, 239, 0.6);
+}
+
+#modal-im{
+  background-color: rgba(211, 136, 242, 0.6);
+}
+
+#modal-us{
+  background-color: rgba(244, 135, 177, 0.6);
+}
+
+#modal-cl{
+  background-color: rgba(244, 135, 177, 0.6);
+}
+
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
+	background: grey;
+	border: 3px solid red;
+	border-radius: 6px;
+	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4);
+  max-height: 300px;
+  width: 300px;
+
+}
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
+	color: blue;
+	padding: 8px;
+}
+
+/* Slide 3 ----------------------------------------------*/
+#car-3{
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 300px;
+}
+
+#field {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-image: url("../img/slide2-background.png");
+    background-size: cover;
+  }
+  #ball, #ball2 {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    border-radius: 0.5em;
+  }
+  #ball {
+    background-image: url("../img/sensor-car.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 300px;
+   }
+
+  #ball2 {
+    background: blue; display: none;
+  }
+
+#grid-3{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#ob-1{
+  position: absolute;
+  top: 10px;
+  overflow: hidden;
 }
 
 /* Slick Slider */
