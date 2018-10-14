@@ -24,6 +24,8 @@ $(function (){
     console.log('car animated 2');
   });
 
+
+
   $('#ld').on({
     mouseenter: function(){
       $(this).css('color', '#8adfed');

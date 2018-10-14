@@ -208,9 +208,34 @@ li{
 }
 #ob-1{
   position: absolute;
-  top: 10px;
+  top: 30%;
+  left: 25%;
   overflow: hidden;
 }
+
+/* Slide 4 ----------------------------------------------*/
+
+#slide4{
+  background-image: url("../img/slide3-background.jpeg");
+  background-size: contain;
+  height: 500px;
+  width:100%;
+  position: relative;
+}
+
+#ob-2{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  overflow: hidden;
+}
+#ob-3{
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  overflow: hidden;
+}
+
 
 /* Slick Slider */
 .slick-slider
