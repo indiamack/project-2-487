@@ -64,7 +64,17 @@
   top: 300px;
 }
 
-/* Slide 1 ----------------------------------------------*/
+/* Slide 2 ----------------------------------------------*/
+
+.site-2{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 500px;
+  grid-template-areas:;
+  margin: 0;
+}
+
 #slide2{
   background-image: url("../img/slide2-background.png");
   background-size: cover;
@@ -78,7 +88,7 @@
   width: 200px;
   height: auto;
   position: absolute;
-  top: 25%;
+  top: 15%;
   width: 500px;
   height: auto;
   grid-column: 1/5;
@@ -88,7 +98,7 @@
   width: 500px;
   height: auto;
   position: absolute;
-  top: 25%;
+  top: 15%;
 }
 
 .sensors{
@@ -169,73 +179,42 @@ li{
 }
 
 /* Slide 3 ----------------------------------------------*/
-#car-3{
-  width: 300px;
-  height: auto;
-  position: absolute;
-  top: 300px;
-}
 
-#field {
-    position: relative;
-    height: 500px;
-    width: 100%;
-    background-image: url("../img/slide2-background.png");
-    background-size: cover;
-  }
-  #ball, #ball2 {
-    position: absolute;
-    left: 0;
-    bottom: 50%;
-    border-radius: 0.5em;
-  }
-  #ball {
-    background-image: url("../img/sensor-car.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 300px;
-   }
-
-  #ball2 {
-    background: blue; display: none;
-  }
-
-#grid-3{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#ob-1{
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  overflow: hidden;
-}
-
-/* Slide 4 ----------------------------------------------*/
-
-#slide4{
-  background-image: url("../img/slide3-background.jpeg");
-  background-size: contain;
+#slide3{
+  background-image: url("../img/slide3-background.png");
+  background-size: cover;
+  background-position: bottom;
   height: 500px;
   width:100%;
   position: relative;
 }
 
+#ob-1{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  overflow: hidden;
+}
+
 #ob-2{
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 45%;
   overflow: hidden;
 }
 #ob-3{
   position: absolute;
   top: 30%;
-  left: 75%;
+  left: 70%;
   overflow: hidden;
 }
 
+#car-3{
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 70%;
+}
 
 /* Slick Slider */
 .slick-slider
