@@ -22,6 +22,9 @@
   src: url('../fonts/Hind-Bold.ttf');
 }
 
+p{
+  font-family: OpenSans;
+}
 /* Slide 1 ----------------------------------------------*/
 .welcome-title{
   grid-column: 5/9;
@@ -58,10 +61,10 @@
 }
 
 #car{
-  width: 400px;
+  width: 350px;
   height: auto;
   position: absolute;
-  top: 300px;
+  top: 65%;
 }
 
 /* Slide 2 ----------------------------------------------*/
@@ -75,6 +78,10 @@
   margin: 0;
 }
 
+h4{
+  font-family: hind;
+}
+
 #slide2{
   background-image: url("../img/slide2-background.png");
   background-size: cover;
@@ -85,20 +92,17 @@
 #lidar-graphic, #radar-graphic, #image-graphic, #ultrasonic-graphic{
   display: none;
   overflow: hidden;
-  width: 200px;
-  height: auto;
   position: absolute;
   top: 15%;
-  width: 500px;
-  height: auto;
   grid-column: 1/5;
+  transform:scale(0.2);
 }
 
 #car-sensor{
-  width: 500px;
-  height: auto;
+  transform: scale(0.2);
   position: absolute;
   top: 15%;
+  grid-column: 1/5;
 }
 
 .sensors{
@@ -139,7 +143,7 @@ li{
 .modal{
   padding: 15px;
   display: none;
-  color: white;
+  color: #7b7878;
 }
 
 #modal-ld{
@@ -216,102 +220,18 @@ li{
   top: 70%;
 }
 
+.obstacle-title{
+  justify-content: space-around;
+  grid-column: 2/8;
+  font-family: Hind;
+  color:#5b5c56;
+  display: none;
+}
+
 
 /* Quiz -------------------------------------------------- */
 
-body {
-  background: #0c1514;
-  color: #fff;
-}
-h1 {
-  color: #63c5bc;
-}
-.faded {
-  color: #777;
-}
-#quiz-counter {
-  color: #88449a;
-}
-.quiz-container {
-    padding: 0.25em;
-    max-width: 650px;
-    margin: 1em auto;
-}
 
-.quiz-container a {
-    text-decoration: none;
-    color: #333;
-}
-
-#quiz-header,
-#quiz-start-screen,
-#quiz-results-screen,
-#quiz-counter {
-    text-align: center;
-}
-
-.question {
-    font-size: 1.25em;
-}
-
-.answers {
-    list-style: none;
-    padding: 0;
-}
-
-.answers a {
-    display: block;
-    padding: 0.5em 1em;
-    margin-bottom: 0.5em;
-    background: #fff;
-}
-
-.answers a.correct {
-    background: #090;
-}
-.answers a.incorrect {
-    background: #c00;
-}
-
-.answers a.correct,
-.answers a.incorrect {
-    color: #fff;
-}
-
-#quiz-controls {
-    background: #63c5bc;
-    color: #111;
-    padding: 0.25em 0.5em 0.5em;
-    text-align: center;
-}
-
-#quiz-response {}
-#quiz-results {
-    font-size: 1.25em;
-}
-
-#quiz-buttons a,
-.quiz-container .quiz-button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    background: #88449a;
-    color: #fff;
-}
-#quiz-buttons a {
-    background: #fff;
-    color: #333;
-}
-
-/* Quiz State Overrides */
-
-.quiz-results-state #quiz-controls {
-    background: none;
-    padding: 0;
-}
-.quiz-results-state #quiz-buttons a {
-    background: #88449a;
-    color: #fff;
-}
 
 /* Slick Slider ------------------------------------------*/
 .slick-slider

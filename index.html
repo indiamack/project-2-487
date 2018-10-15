@@ -3,6 +3,7 @@
 <head>
   <title>Project 2</title>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/sprite.css" type="text/css">
   <link rel="stylesheet" type="text/css" href="tooltipster/css/tooltipster.bundle.min.css" />
           <link href="https://surveyjs.azureedge.net/1.0.49/survey.css" type="text/css" rel="stylesheet"/>
 
@@ -24,22 +25,26 @@
         <div class="modal-wrapper flex">
           <div class="modal flex" id="modal-ld">
             <h4>What Is It?</h4>
-            <p>Lidar does this and this and this and this and this</p>
+            <p>What distinguishes between a speeding car and a strolling pedestrian? Lidar, or light detection and ranging. With this sensor, a non-visible laser beam scans the roadways to help the car percieve the world in 3D with the help of camera sensors.   </p>
             <h4>Why Does It Need to Be Better?</h4>
+            <p>Lidar sensors are the most effective sensor in identfying objects, but because they require rare earth medals, they remain more expensive than other kinds of sensors, creating an economic barrier. The most common type of lidar sensor uses flashes of the beams, but continuius lidar is under development now as well.</p>
           </div>
           <div class="modal flex" id="modal-rd">
             <h4>What Is It?</h4>
-            <p>Lidar does this and this and this and this and this</p>
+            <p>The less expensive, less accurate version of lidar, radar sensors, or radio detection and ranging, send out electomagnetic waves, recieving the waves when they bounce off an object to determine how fast and how fast and object is moving. Long range radars are located on the head and rear of the vehicle to detect other vehicles moving in front of and behind it. Short range radars are located on the side of the vehicle.</p>
             <h4>Why Does It Need to Be Better?</h4>
+            <p>Need to go under a bridge without the top of your truck scrapping the ceiling? Radar can't help you there -- it can't detect height. 3D radar is under development to solve that problem. In the meantime, radar is a great supplement to lidar, for added accuracy.</p>
           </div><div class="modal flex" id="modal-im">
             <h4>What Is It?</h4>
-            <p>Lidar does this and this and this and this and this</p>
+            <p>Image sensors use cameras, making this the closest to the human eye for an autonomous vehicle -- but only for color and fonts. The images the cameras generate help the vehicle read signs, stoplights, and road markings. They're also a good backup in case other sensors fail.</p>
             <h4>Why Does It Need to Be Better?</h4>
+            <p>Just like a photograph framed on your desk, the image sensors struggle to show the world in 3D with impariments in depth perception. And just like your own eyes, it can't see through heavy fog and rain. The reach of cameras needs to extend as well, widening to 250 meters away from the car. Image sensors right now only recognize pedestrians only 95 percent of the time, too, and that 5 percent discrepency can mean the difference between life and death.</p>
           </div>
           <div class="modal flex" id="modal-us">
             <h4>What Is It?</h4>
-            <p>Lidar does this and this and this and this and this</p>
+            <p>An autonomous vehicle can learn a thing or two from bats. Like those nocturnal fliers, ultrasonic sensors send out sound waves and use the echos bouncing off an object to show its location. Anything within 10 meters -- be it cars, pedestrians, or bike --  is visible in 3D. Automated parking is its best application.</p>
             <h4>Why Does It Need to Be Better?</h4>
+            <p>These sensors can only be used at low speeds, but with accuracy down the the centimeter, it serves it's purpose perfectly! No further development needed.</p>
           </div>
           <div class="modal flex" id="modal-cl">
             <h4>What Is It?</h4>
@@ -58,27 +63,34 @@
           </ul>
         </div>
         <div class="sensors">
-          <img id="car-sensor" src="img/sensor-car.png">
-          <img id="lidar-graphic" src="img/lidar.png">
-          <img id="radar-graphic" src="img/radar.png">
-          <img id="image-graphic" src="img/image.png">
-          <img id="ultrasonic-graphic" src="img/ultrasonic.png">
+          <div class="sensor-car" id="car-sensor"></div>
+          <div class="lidar" id="lidar-graphic"></div>
+          <div class="radar" id="radar-graphic"></div>
+          <div class="image" id="image-graphic"></div>
+          <div class="ultrasonic" id="ultrasonic-graphic"></div>
         </div>
       </div>
     </div>
     <div id="slide3">
       <div class="site">
+        <div class="welcome-title">
+          <h2>OTHER ROADBLOCKS</h2>
+        </div>
         <img id="car-3" src="img/car-graphic.png">
-        <img id="ob-1" class="tooltip" title="This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!" src="img/obstacle.png">
-        <img id="ob-2" class="tooltip" title="This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!" src="img/obstacle.png">
-        <img id="ob-3" class="tooltip" title="This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!" src="img/obstacle.png">
+        <div class="obstacle tooltip" id="ob-1" title="This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!"></div>
+        <div class="obstacle tooltip" id="ob-2" title="This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!"></div>
+        <div class="obstacle tooltip" id="ob-3" title="This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!This is my span's tooltip message!"></div>
+        <div class="obstacle-title flex">
+          <h3 id="ob-1-t">Pedestrian Tracking</h3>
+          <h3 id="ob-2-t">Handicapped Transportation</h3>
+          <h3 id="ob-3-t">Regulations</h3>
+        </div>
       </div>
     </div>
     <div id="slide4">
       <div id="surveyElement"></div>
-        <div id="surveyResult"></div>
-
-  </div>
+      <div id="surveyResult"></div>
+    </div>
 
 
 

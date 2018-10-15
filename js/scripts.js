@@ -16,13 +16,16 @@ $(function (){
 
   $('#slide1').ready(function(){
     console.log('car animated');
-    $('#car').animate({left: '+=300px'}, 1000);
+      $('#car').animate({left: '+=300px'}, 1000);
   });
 
+$('.slick-next').click('afterChange', function(event, slick, currentSlide, slickPause){
+  waitForAnimate: true;
+  $('#car').animate({left: '+=300px'}, 1000);
+  console.log('car animated 2');
 
-  $('.site').on('afterChange', function(slick){
-    console.log('car animated 2');
-  });
+});
+
 
 //Slide 2 -----------------------------------------------
 
@@ -144,9 +147,31 @@ $('#car-sensor').on({
     },
     });
 
+    $('#ob-1').on({
+      mouseenter: function(){
+        $('ob-1-t').css('display', 'block');
+      },
+      mouseleave: function(){
+      $('ob-1-t').css('display', 'none');
+    },
+    });
+
+    $('#ob-2').on({
+      mouseenter: function(){
+        $('ob-2-t').css('display', 'block');
+      },
+      mouseleave: function(){
+      $('ob-2-t').css('display', 'none');
+    },
+    });
+
     $('#ob-3').on({
+      mouseenter: function(){
+        $('ob-3-t').css('display', 'block');
+      },
       mouseleave: function(){
       $('#car-3').animate({left: '+=25%'}, 1000);
+      $('ob-3-t').css('display', 'none');
     },
     });
 // Quiz -------------------------------------------------------
@@ -155,8 +180,6 @@ var json = {
    title: "American History",
    showProgressBar: "bottom",
    showTimerPanel: "top",
-   maxTimeToFinishPage: 10,
-   maxTimeToFinish: 25,
    firstPageIsStarted: true,
    startSurveyText: "Start Quiz",
    pages: [
@@ -171,8 +194,8 @@ var json = {
            questions: [
                {
                    type: "radiogroup",
-                   name: "civilwar",
-                   title: "When was the Civil War?",
+                   name: "",
+                   title: "",
                    choices: [
                        "1750-1800", "1800-1850", "1850-1900", "1900-1950", "after 1950"
                    ],
@@ -184,10 +207,10 @@ var json = {
                {
                    type: "radiogroup",
                    name: "libertyordeath",
-                   title: "Who said 'Give me liberty or give me death?'",
+                   title: "",
                    choicesOrder: "random",
                    choices: [
-                       "John Hancock", "James Madison", "Patrick Henry", "Samuel Adams"
+                       ""
                    ],
                    correctAnswer: "Patrick Henry"
                }
@@ -198,12 +221,12 @@ var json = {
                {
                    type: "radiogroup",
                    name: "magnacarta",
-                   title: "What is the Magna Carta?",
+                   title: "",
                    choicesOrder: "random",
                    choices: [
-                       "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"
+                       ""
                    ],
-                   correctAnswer: "The foundation of the British parliamentary system"
+                   correctAnswer: ""
                }
            ]
        }
