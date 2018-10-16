@@ -21,7 +21,7 @@ $(function (){
 
 $('.slick-next').click('afterChange', function(event, slick, currentSlide, slickPause){
   waitForAnimate: true;
-  $('#car').animate({left: '+=300px'}, 1000);
+  $('#car-sensor').animate({left: '+=10%'}, 1000);
   console.log('car animated 2');
 
 });
@@ -138,6 +138,7 @@ $('#car-sensor').on({
         });
 }
 
+
 //Slide 3 -----------------------------------------------------
 
 
@@ -177,72 +178,74 @@ $('#car-sensor').on({
 // Quiz -------------------------------------------------------
 
 var json = {
-   title: "American History",
-   showProgressBar: "bottom",
-   showTimerPanel: "top",
-   firstPageIsStarted: true,
-   startSurveyText: "Start Quiz",
-   pages: [
-       {
-           questions: [
-               {
-                   type: "html",
-                   html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
-               }
-           ]
-       }, {
-           questions: [
-               {
-                   type: "radiogroup",
-                   name: "",
-                   title: "",
-                   choices: [
-                       "1750-1800", "1800-1850", "1850-1900", "1900-1950", "after 1950"
-                   ],
-                   correctAnswer: "1850-1900"
-               }
-           ]
-       }, {
-           questions: [
-               {
-                   type: "radiogroup",
-                   name: "libertyordeath",
-                   title: "",
-                   choicesOrder: "random",
-                   choices: [
-                       ""
-                   ],
-                   correctAnswer: "Patrick Henry"
-               }
-           ]
-       }, {
-           maxTimeToFinish: 15,
-           questions: [
-               {
-                   type: "radiogroup",
-                   name: "magnacarta",
-                   title: "",
-                   choicesOrder: "random",
-                   choices: [
-                       ""
-                   ],
-                   correctAnswer: ""
-               }
-           ]
-       }
-   ],
-   completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
+    title: "Autonomous Vehicles",
+    showProgressBar: "bottom",
+    showTimerPanel: "top",
+    maxTimeToFinishPage: 10,
+    maxTimeToFinish: 25,
+    firstPageIsStarted: true,
+    startSurveyText: "Start Quiz",
+    pages: [
+        {
+            questions: [
+                {
+                    type: "html",
+                    html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+                }
+            ]
+        }, {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "sensors",
+                    title: "Which sensor doesn't need any more development?",
+                    choices: [
+                        "lidar", "image", "radar", "ultrasonic", "cloud"
+                    ],
+                    correctAnswer: "ultrasonic"
+                }
+            ]
+        }, {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "sensors 2",
+                    title: "Which sensor is the most effective in identifying objects?",
+                    choicesOrder: "random",
+                    choices: [
+                        "lidar", "radar", "ultrasonic", "cloud", "image"
+                    ],
+                    correctAnswer: "lidar"
+                }
+            ]
+        }, {
+            maxTimeToFinish: 15,
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "magnacarta",
+                    title: "What is the Magna Carta?",
+                    choicesOrder: "random",
+                    choices: [
+                        "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"
+                    ],
+                    correctAnswer: "The foundation of the British parliamentary system"
+                }
+            ]
+        }
+    ],
+    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
 };
 
 window.survey = new Survey.Model(json);
 
 survey
-   .onComplete
-   .add(function (result) {
-       document
-           .querySelector('#surveyResult')
-           .innerHTML = "result: " + JSON.stringify(result.data);
-   });
+    .onComplete
+    .add(function (result) {
+        document
+            .querySelector('#surveyResult')
+            .innerHTML = "result: " + JSON.stringify(result.data);
+    });
 
 $("#surveyElement").Survey({model: survey});
 
