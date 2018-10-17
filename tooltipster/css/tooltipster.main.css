@@ -1,5 +1,8 @@
 /* This is the core CSS of Tooltipster */
-
+.tooltipster-box, .tooltipster-content, .tooltipster-base{
+	width: 200px;
+	height: 20px;
+}
 /* GENERAL STRUCTURE RULES (do not edit this section) */
 
 .tooltipster-base {

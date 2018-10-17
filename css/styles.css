@@ -226,7 +226,7 @@ li{
 .site-4{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 200px 50px;
+  grid-template-rows: 10px 200px 200px;
   grid-template-areas:;
   margin: 0;
 }
@@ -238,12 +238,10 @@ li{
   flex-direction:column;
   text-align:right;
   padding-right: 10%;
-  position: absolute;
-  z-index: 1;
 }
 
 .art-title h1{
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
@@ -253,43 +251,24 @@ li{
   font-family: OpenSans;
 }
 
-/*#slide4 img{
-  width: 100%;
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-  grid-column:1/9;
-  z-index: 1;
-  display: block;
-}
-
-.wrp{
-  width:100%;
-  height: 500px;
-}
-
-#slide4 img, #slide4 map{
-  width: 100%;
-  height: 500px;
-}
-
-#ped-1{
-  background-color:red;
-  color: red;
-}*/
-
 .container{
   width: 100%;
   height: 500px;
+  grid-column: 1/9;
 }
 
 .container img{
   display: block;
 }
 
-area{
-  width: 100%;
-  height: 500px;
+.ped-tracking{
+  grid-column: 2/6;
+  background-color: rgba(91, 92, 86, 0.6);
+  color: white;
+  font-family: OpenSans;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 /* Quiz -------------------------------------------------- */
 
